@@ -18,7 +18,7 @@ class TimeControler {
                     when(msg.what){
                         1 -> {tv_mainTime?.setText(msg.obj.toString()) }
 
-
+                    //
                     }
                 }
             }
