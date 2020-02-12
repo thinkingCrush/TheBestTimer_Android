@@ -8,10 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 import kr.Tcrush.TheBestTimer.R
+import kr.Tcrush.TheBestTimer.Tool.Dlog
 
 class MainFragmentView : Fragment(){
 
-    var mainViewPager : MainViewPager ?= null
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -25,14 +25,10 @@ class MainFragmentView : Fragment(){
 
     fun initView(view : View){
         try {
-            mainViewPager = view.findViewById(R.id.mainViewPager)
-            mainViewPager?.adapter = MainPagerAdapter(activity?.supportFragmentManager)
-
             val dotsIndicator = view.findViewById<DotsIndicator>(R.id.dots_indicator)
-            val viewPager = view.findViewById<ViewPager>(R.id.mainViewPager)
-            val adapter = mainViewPager?.adapter
-            viewPager.adapter = adapter
-            dotsIndicator.setViewPager(viewPager)
+            val mainViewPager = view.findViewById<ViewPager>(R.id.mainViewPager)
+            mainViewPager.adapter = MainPagerAdapter(activity?.supportFragmentManager)
+            dotsIndicator.setViewPager(mainViewPager)
 
         }catch (e : Exception){
             e.printStackTrace()

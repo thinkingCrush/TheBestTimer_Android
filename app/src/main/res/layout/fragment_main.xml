@@ -24,8 +24,8 @@
             android:gravity="center">
             <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
                 android:id="@+id/dots_indicator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 app:dotsColor="@color/colorPrimary"
                 app:dotsCornerRadius="8dp"
                 app:dotsSize="16dp"
@@ -56,13 +56,19 @@
     </LinearLayout>
 
 
-    <kr.Tcrush.TheBestTimer.View.MainViewPager
+    <!--<kr.Tcrush.TheBestTimer.View.MainViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/mainViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </kr.Tcrush.TheBestTimer.View.MainViewPager>
+    </kr.Tcrush.TheBestTimer.View.MainViewPager>-->
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainViewPager">
+
+    </androidx.viewpager.widget.ViewPager>
 
 
 
