@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.viewpager.widget.ViewPager
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 import kr.Tcrush.TheBestTimer.R
 
 class MainFragmentView : Fragment(){
@@ -25,6 +27,12 @@ class MainFragmentView : Fragment(){
         try {
             mainViewPager = view.findViewById(R.id.mainViewPager)
             mainViewPager?.adapter = MainPagerAdapter(activity?.supportFragmentManager)
+
+            val dotsIndicator = view.findViewById<DotsIndicator>(R.id.dots_indicator)
+            val viewPager = view.findViewById<ViewPager>(R.id.mainViewPager)
+            val adapter = mainViewPager?.adapter
+            viewPager.adapter = adapter
+            dotsIndicator.setViewPager(viewPager)
 
         }catch (e : Exception){
             e.printStackTrace()
