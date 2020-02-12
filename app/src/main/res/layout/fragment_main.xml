@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cl_RealMainLayout"
+    android:fitsSystemWindows="true">
+
+    <kr.Tcrush.TheBestTimer.View.MainViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mainViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </kr.Tcrush.TheBestTimer.View.MainViewPager>
+
+    <include
+        layout="@layout/dots_indicator"/>
+
+</FrameLayout>

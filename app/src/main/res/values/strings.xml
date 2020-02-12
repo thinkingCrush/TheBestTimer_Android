@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TheBestTimer</string>
+
+    <string name="close_app">"Press the \'Back\' button again to exit."</string>
+</resources>
