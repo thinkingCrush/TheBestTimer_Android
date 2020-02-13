@@ -18,9 +18,7 @@ import androidx.viewpager.widget.ViewPager
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 import kotlinx.android.synthetic.main.activity_main.*
 import kr.Tcrush.TheBestTimer.Tool.ButtonClickEffect
-import kr.Tcrush.TheBestTimer.Tool.Dlog
 import kr.Tcrush.TheBestTimer.Tool.GyroscopeListener
-import kr.Tcrush.TheBestTimer.Tool.TimeControler
 import kr.Tcrush.TheBestTimer.View.FragmentA
 import kr.Tcrush.TheBestTimer.View.MainPagerAdapter
 
@@ -33,7 +31,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
      * */
     companion object{
         var mainContext : Context? = null
-        var tv_mainTime : TextView? = null
         val timerState_Standby = 1
         val timerState_Running = 2
         val timerState_Select = 3
@@ -52,8 +49,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 
     fun initView(){
-        val tv_mainTime : TextView = findViewById(R.id.tv_mainTime)
-        TimeControler().setTimeHandler(tv_mainTime)
 
         var tv_startHelp : TextView = findViewById(R.id.tv_startHelp)
         tv_startHelp.setOnClickListener(this)

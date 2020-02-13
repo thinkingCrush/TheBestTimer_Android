@@ -5,13 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.TimePicker
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_a.*
 import kr.Tcrush.TheBestTimer.R
 import java.lang.Exception
 
 class FragmentA : Fragment(){
 
     var ll_fragmentA_background : LinearLayout ?= null
+    var tp_timerPicker : TimePicker ?= null
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -38,6 +41,7 @@ class FragmentA : Fragment(){
     fun initView(view : View){
         try {
             ll_fragmentA_background = view.findViewById(R.id.ll_fragmentA_background)
+            tp_timerPicker = view.findViewById(R.id.tp_timerPicker)
         }catch (e : Exception){
             e.printStackTrace()
         }
