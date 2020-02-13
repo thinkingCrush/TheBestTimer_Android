@@ -11,10 +11,11 @@ class VibratorSupport {
             val vibrator =
                 context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                vibrator.vibrate(VibrationEffect.createOneShot(300, -1))
+                vibrator.vibrate(VibrationEffect.createOneShot(miiliseconds.toLong(), -1))
             }
         } catch (e: Exception) {
             e.printStackTrace()
         }
     }
+
 }

@@ -3,6 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/ll_fragmentB_background"
-    android:background="@color/fragmentBackground_2">
+    android:background="@color/fragmentBackground_1">
 
 </LinearLayout>

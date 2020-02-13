@@ -30,7 +30,7 @@ class GyroscopeListener : SensorEventListener{
         if((angleXZ >=170 || angleXZ <= - 170) && (angleYZ >= 170 || angleYZ<=-170)){
             if(!faceOut){
                 faceOut = true
-                MainActivity.mainContext?.let { VibratorSupport().doVibrator(it,1000) }
+                MainActivity.mainContext?.let { VibratorSupport().doVibrator(it,300) }
             }
         }else{
             faceOut = false
